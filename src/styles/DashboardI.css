@@ -1,0 +1,224 @@
+.dashboard {
+  width: 100%;
+  background-color: #f2f4f9;
+  display: flex;
+}
+.left-nav {
+  flex: 0.05;
+  line-height: 100%;
+  background-color: #5189d3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+}
+.left-nav-icons {
+  color: #f2f4f9 !important;
+  margin-bottom: 70px !important;
+}
+
+.dashboard--left {
+  flex: 0.95;
+  height: 100%;
+  width: 100%;
+}
+.dashboard--body {
+  padding: 15px;
+}
+.nav-top {
+  background-color: #fff;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.nav-search-icon {
+  color: #f2f4f9 !important;
+  position: absolute;
+  left: 37px;
+}
+
+.nav-top-search {
+  padding: 10px 30px;
+  width: 300px;
+  color: #9aabc2;
+  border: 2px solid #f2f4f9;
+  outline: none;
+  border-radius: 10px;
+}
+.dashboard--cards {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+.dashboard--cards--left {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+}
+.dashboard--cards--right {
+  flex: 0.3;
+}
+.dashboard--cardsLeft--first {
+  flex: 0.45;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard--cardsLeft--first > *,
+.dashboard--cardsLeft--second > * {
+  padding: 15px;
+}
+.dashboard--cardsLeft--second {
+  flex: 0.55;
+  display: flex;
+  flex-direction: column;
+}
+.invoice,
+.payments {
+  background-color: #fff;
+  height: 300px;
+  margin: 15px 15px 15px 0px;
+  box-shadow: 0px 5px 20px #c0d2eb;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.invoice-icon,
+.payments-icon,
+.customers--icon,
+.services--icon,
+.activities--icon {
+  color: #819bbe !important;
+}
+.invoice--header,
+.payments--header,
+.customers--header,
+.services--header,
+.activities--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.invoice-icon:hover,
+.payments-icon:hover,
+.customers--icon:hover,
+.services--icon:hover,
+.activities--icon:hover {
+  color: #5189d3 !important;
+}
+.invoice--issue > h1 {
+  font-size: 40px;
+  color: #5189d3;
+}
+.payments-fee,
+.invoice--issue {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+.payments-fee > h1,
+.invoice--issue > h1 {
+  margin-top: 75px;
+  text-align: center;
+  color: #5189d3;
+  font-size: 40px;
+}
+.customers,
+.services {
+  background-color: #fff;
+  margin: 0px 15px 15px 0px;
+  box-shadow: 0px 5px 20px #c0d2eb;
+  cursor: pointer;
+}
+.customers--list {
+  display: flex;
+  margin: 25px 0px;
+  padding: 0px 10px;
+}
+.customers--id {
+  flex: 0.2;
+  margin-bottom: 15px;
+}
+.customers--name {
+  color: #5189d3;
+  font-weight: 500;
+}
+.customers--details {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f2f4f9;
+}
+.activities {
+  margin: 15px 0px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px #c0d2eb;
+}
+.activity,
+.activity--invoice {
+  margin: 20px 0px;
+  cursor: pointer;
+  width: 100%;
+}
+.activity--invoice {
+  border: 1px solid #9aabc2;
+  box-shadow: 0px 0px 15px #e5e9f5;
+  border-radius: 10px;
+  padding: 15px;
+}
+.activity--invoice > h4 {
+  color: #5189d3;
+}
+.activity--invoice > p {
+  margin-top: 20px;
+}
+#invoice-number {
+  color: #5189d3;
+}
+small {
+  font-weight: 200;
+  margin-left: 10px;
+  color: #daaa9a;
+  font-style: italic;
+}
+.activity--invoice:hover {
+  box-shadow: 0px 0px 20px #a0adc0;
+}
+.customers:hover,
+.services:hover,
+.invoice:hover,
+.payments:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 20px #819bbe;
+}
+
+@media screen and (max-width: 1240px) {
+  .left-nav {
+    display: none;
+  }
+  .dashboard--left,
+  .dashboard--cards--left,
+  .dashboard--cards--right {
+    flex: 1;
+  }
+  .dashboard--cards {
+    flex-direction: column;
+  }
+  .dashboard--cards--right {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard--cards--left {
+    flex-direction: column;
+    flex: 1;
+  }
+}
